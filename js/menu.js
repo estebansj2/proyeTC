@@ -16,10 +16,6 @@ var Menu = {
 	abrirNiveles: function() {
 		$("#modal-principal").css('visibility', 'hidden');
 		$("#modal-niveles").css('visibility', 'visible');
-	},
-	abrirInstrucciones: function() {
-		$("#modal-principal").css('visibility', 'hidden');
-		$("#modal-instruccion").css('visibility', 'visible');
 	}
 }
 
