@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Incluir los archivos donde este guardado el estilo en formato css -->
+<link rel="stylesheet" href="css/juego.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<!-- Incluir los archivos donde este el codigo Javascript del juego -->
+<link rel='shortcut icon' type='image/x-icon' href='/vampire-dracula.png' />
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src='js/resources.js'> </script>
+<script src='js/jugador.js'> </script>
+<script src='js/dibujante.js'> </script>
+<script src='js/obstaculo.js'> </script>
+<script src='js/enemigo.js'> </script>
+<script src='js/zombie_caminante.js'></script>
+<script src='js/zombie_conductor.js'></script>
+<script src='js/juego.js'> </script>
+<script src='js/menu.js'> </script>
+<script src="js/nivelesJuego.js"></script>
+
+<title>Proyecto 2019  </title>
+
+
+</head>
+
+<input type="button" value="< Clic para jugar nuevamente.  >" onClick="window.location.reload()" class="boton-recargar" id="reiniciar">
+
+<div id="bg-modal">
+	<div id="modal-principal">
+		<div id="modal-principal button">
+			<button class="volverAlJuego">Volver al juego</button>
+			<button class="niveles">Niveles</button>
+			<button class="musica">Sonido (SI) / (NO)</button>
+		</div>
+	</div>
+	<div id="modal-niveles">
+		<div id="modal-principal button">
+			<a class="boton" href="?nivel=1">1</a>
+			<a class="boton" href="?nivel=2">2</a>
+			<a class="boton" href="error.html">3</a>
+			<a class="boton" href="error.html">4</a>
+		</div>
+	</div>	
+</div>
+
+</body>
+</html>
