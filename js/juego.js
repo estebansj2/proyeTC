@@ -1,12 +1,14 @@
-/* El objeto Juego sera el encargado del control de todo el resto de los Objetos
+/* El objeto juego sera el encargado del control de todo el resto de los Objetos
 existentes.
-Le dara ordenes al Dibujante para que dibuje entidades en la pantalla. Cargara
-el mapa, chequeara colisiones entre los objetos y actualizara sus movimientos
-y ataques. Gran parte de su implementacion esta hecha, pero hay espacios con el
-texto COMPLETAR que deben completarse segun lo indique la consigna.
 
-El objeto Juego contiene mucho codigo. Tomate tu tiempo para leerlo tranquilo
-y entender que es lo que hace en cada una de sus partes. */
+Le dará ordenes al Dibujante para que dibuje entidades en la pantalla. Cargara
+el mapa, chequeara colisiones entre los objetos y actualizara sus movimientos
+y ataques. Gran parte de su implementación esta hecha, pero hay espacios con el
+texto COMPLETAR que deben completarse según lo indique la consigna.
+
+El objetivo del juego contiene mucho código.
+
+Tomate tu tiempo para leerlo tranquilo y entender que es lo que hace en cada una de sus partes. */
 
 $(document).ready(function(){
   $.urlParam = function(name){
@@ -26,12 +28,10 @@ $(document).ready(function(){
     vidasInicial: Jugador.vidas,
     ganador: false,
     bordes: [
-      // // Bordes
       new Obstaculo('', 0, 5, 961, 18, 0),
       new Obstaculo('', 0, 559, 961, 18, 0),
       new Obstaculo('', 0, 5, 18, 572, 0),
       new Obstaculo('', 943, 5, 18, 572, 0),
-      // Veredas
       new Obstaculo('', 18, 23, 51, 536, 2),
       new Obstaculo('', 69, 507, 690, 52, 2),
       new Obstaculo('', 587, 147, 173, 360, 2),
@@ -115,7 +115,6 @@ $(document).ready(function(){
     var movY = 0;
     var velocidad = this.jugador.velocidad;
 
-    // El movimiento esta determinado por la velocidad del jugador
     if (tecla == 'izq') {
       movX = -velocidad,
       Jugador.sprite = 'imagenes/auto_rojo_izquierda.png', 
@@ -253,9 +252,9 @@ $(document).ready(function(){
 
   Juego.iniciarRecursos();
   Juego.chequearEstadoNiveles();
-
-  // Activa las lecturas del teclado al presionar teclas
-  // Documentacion: https://developer.mozilla.org/es/docs/Web/API/EventTarget/addEventListener
+  
+// doc: https://developer.mozilla.org/es/docs/Web/API/EventTarget/addEventListener
+  
   document.addEventListener('keydown', function(e) {
     var allowedKeys = {
       27: 'esc',
